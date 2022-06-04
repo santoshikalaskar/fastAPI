@@ -7,6 +7,8 @@ from schemas.user import serializeList, serializeDict
 get_question = APIRouter() 
 
 @get_question.post('/user_question', status_code=status.HTTP_200_OK)
-async def user_question(question: Union[str, None] = None):
-    item = {"question": question}
+async def user_question(question: Union[str, None] = None, user_object_id: Union[str, None] = None):
+    
+    item = {"question": question, "user_object_id": user_object_id}
+    
     return item
