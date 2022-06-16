@@ -3,11 +3,18 @@ from models.end_user import end_User
 from config.database import db 
 from schemas.user import serializeList, serializeDict, userEntity
 
+# from datetime import datetime
+# from dateutil import tz
 
 end_user = APIRouter() 
 
 @end_user.get('/')
 def welcome():
+    # timestamp = 1655388507.476864
+    # dt_obj = datetime.fromtimestamp(1140825600)
+    # print("date_time:",dt_obj)
+    # dt_obj = datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+    # return {"detail":"Welcome to Bridgelabz Chatbot program..!!!", "date_time":dt_obj}
     return {"detail":"Welcome to Bridgelabz Chatbot program..!!!"}
 
 
